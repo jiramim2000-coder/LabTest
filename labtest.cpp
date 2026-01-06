@@ -1,16 +1,30 @@
 #include<bits/stdc++.h>
 using namespace std;
-//write a user defined function to find first N prime numbers;
-//the function should be named like : youname_yourid;
 
-/*
-example:
+void mdrazor_123(int n)   // same as branch name
+{
+    int count = 0;
 
-void nishat_90(int n){
-//your code here;
+    for(int num = 2; count < n; num++)
+    {
+        bool prime = true;
+
+        for(int i = 2; i <= num/2; i++)
+        {
+            if(num % i == 0)
+            {
+                prime = false;
+                break;
+            }
+        }
+
+        if(prime)
+        {
+            cout << num << " ";
+            count++;
+        }
+    }
 }
-*/
-
 int main(){
 
 
